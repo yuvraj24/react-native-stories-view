@@ -2,7 +2,7 @@ import React, { useState, StyleHTMLAttributes, HtmlHTMLAttributes, CSSProperties
 import ProgressView from "./ProgressView"
 import StoryView from "./StoryView"
 import { StoryContainerProps } from "../utils/interfaceHelper"
-import { StyleSheet, View, SafeAreaView, Platform, Keyboard, Alert, KeyboardAvoidingView } from "react-native"
+import { StyleSheet, View, SafeAreaView, Platform, Keyboard, Alert, KeyboardAvoidingView, Dimensions } from "react-native"
 import { GREEN, LIGHT_GRAY_0, RED, TINT_GRAY, GRAY } from "../utils/colors"
 import ArrowNavigator from "./ArrowNavigator"
 import ReplyFooterView from "./ReplyFooterView"
@@ -156,15 +156,14 @@ const styles = StyleSheet.create({
   customView: {
     position: 'absolute',
     flexDirection: 'column',
-    width: '100%',
-    height: '100%',
-    backgroundColor: TINT_GRAY,
+    width: Dimensions.get('window').width, // Important
+    height: '100%', 
   },
   topView: {
     position: 'absolute',
     flexDirection: 'column',
-    width: '76%', // Important
-    marginTop: '3%',
+    width: Dimensions.get('window').width, // Important
+    paddingTop: '3%',  
   },
   bottomView: {
     position: 'absolute',
@@ -176,12 +175,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'baseline',
     textAlignVertical: 'bottom',
-    marginBottom: '2%'
+    paddingTop: '3%',
+    paddingBottom: '2%',
+    // backgroundColor: TINT_GRAY,
   },
   progressView: {
     flex: 1,
-    width: '100%',
+    width: Dimensions.get('window').width, // Important
     position: 'absolute',
     flexDirection: 'row',
+    backgroundColor: TINT_GRAY,
   },
 });

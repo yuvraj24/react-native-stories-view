@@ -54,6 +54,8 @@ target 'example' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'CocoaAsyncSocket', :modular_headers => true, :configurations => ['Debug']
+  
   target 'exampleTests' do
     inherit! :complete
     # Pods for testing

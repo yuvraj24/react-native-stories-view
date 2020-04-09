@@ -21,9 +21,12 @@ function ProgressView(props: ProgressViewProps) {
     if (props.enableProgress) {
       if (progressIndex < props.images.length) {
         const mProgress = progressIndex + 1
-        console.log("changePosition " + mProgress)
-        setProgressIndex(mProgress)
+        console.log("changePosition " + mProgress) 
         props.onChange(mProgress)
+
+        setTimeout(() => {
+          setProgressIndex(mProgress)
+        }, 1500)
       }
     } else {
       setProgressIndex(progressIndex)
@@ -80,6 +83,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     flexDirection: 'row',
     flex: 1,  
+    backgroundColor:TINT_GRAY
   },
   flatStyle: {
     flex: 1,
@@ -89,7 +93,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: '3%',
     paddingRight: '3%',
-    marginTop: '5%',
-    marginBottom: '3%',
+    paddingTop: '5%',
+    paddingBottom: '4%',
   }
 });

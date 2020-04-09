@@ -7,22 +7,26 @@ import {
   Alert,
   TouchableOpacity,
   Text,
+  Dimensions,
 } from 'react-native';
 
 // @ts-ignore
 import {StoryContainer, ProgressBar} from 'react-native-stories-view';
 
-import {MID_GREEN, BLACK, LIGHT_GREEN} from './colors';
+import {MID_GREEN, BLACK, LIGHT_GREEN, BAR_ACTIVE_COLOR, BAR_INACTIVE_COLOR, TINT_GRAY} from './colors';
 
 import PROFILE from './images/profile2.jpg';
 import BACK from './images/back.png';
 
-const images = [
-  'https://i.pinimg.com/736x/92/57/1a/92571afc90454b9eacdba00fcb7785ec.jpg',
-  'https://www.itl.cat/pngfile/big/0-7755_nature-pier-bridge-d-river-water-sunset-night.jpg',
-  'https://hdwallpaper20.com/wp-content/uploads/2018/02/samsumg-wallpaper-mobile-x-PIC-WPPW3307-576x1024.jpg',
+const images = [ 
+  'https://s3.ap-south-1.amazonaws.com/hsdreams1/pins/2019/01/big/7d1e5e0b31a650b9314023921b9e161b.jpeg', 
   'https://boostupliving.com/wp-content/uploads/2019/06/best-motivational-quote-mobile-wallpapers-53.jpg',
-  'https://www.itl.cat/pngfile/big/0-7755_nature-pier-bridge-d-river-water-sunset-night.jpg',
+  'https://i.pinimg.com/originals/51/bd/4c/51bd4c1e72d5d6ae5f2a4f31e31d2ef5.jpg',
+  'https://pumpernickelpixie.com/wp-content/uploads/2016/01/15-phone-wallpaper.jpg',
+  'https://i.pinimg.com/originals/5a/f0/e5/5af0e538f7437fd13a73f7c96601ccb6.jpg', 
+  // 'https://i.pinimg.com/originals/60/10/4e/60104ed3bdd932911991ead9611c3489.jpg', 
+  // 'https://hdwallpaper20.com/wp-content/uploads/2018/02/samsumg-wallpaper-mobile-x-PIC-WPPW3307-576x1024.jpg', 
+  // 'https://www.itl.cat/pngfile/big/0-7755_nature-pier-bridge-d-river-water-sunset-night.jpg',
 ];
 
 export default App = () => {
@@ -32,7 +36,7 @@ export default App = () => {
         <View
           // To set the background color in IOS Status Bar also
           style={{
-            backgroundColor: '#000000',
+            backgroundColor: TINT_GRAY,
             height: 45,
           }}>
           <StatusBar barStyle="light-content" backgroundColor={LIGHT_GREEN} />
@@ -56,9 +60,10 @@ export default App = () => {
         /> */}
         <StoryContainer
           visible={true}
-          enableProgress={true}
+          enableProgress={false}
           images={images}
           duration={20}
+
           // User Information in header
           userProfile={{
             userImage: PROFILE,
@@ -70,10 +75,10 @@ export default App = () => {
               Alert.alert('User profile image tapped');
             },
           }}
-          // Custom header component option
+          Custom header component option
           // headerComponent={<View />}
 
-          // Reply option in Footer
+          Reply option in Footer
           replyView={{
             isShowReply: true,
             onReplyTextChange: (textReply) => {
@@ -100,18 +105,18 @@ export default App = () => {
           //   height: '100%',
           // }}
 
-          // barStyle={{
-          //   barActiveColor: BAR_ACTIVE_COLOR,
-          //   barInActiveColor: BAR_INACTIVE_COLOR,
-          //   barWidth: 100,
-          //   barHeight: 4
-          // }}
+          barStyle={{
+            barActiveColor: BAR_ACTIVE_COLOR,
+            barInActiveColor: BAR_INACTIVE_COLOR,
+            barWidth: 100,
+            barHeight: 4
+          }}
 
-          // imageStyle={{
-          //   width: '100%',
-          //   height: '100%',
-          //   alignSelf: 'center',
-          // }}
+          imageStyle={{
+            width: Dimensions.get('window').width,
+            height: Dimensions.get('window').height,
+            alignSelf: 'center',
+          }}
         />
       </SafeAreaView>
     </View>

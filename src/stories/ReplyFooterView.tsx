@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'center',
-        marginBottom: Platform.OS === 'android' ? '2%' : '0%'
+        marginBottom: Platform.OS === 'android' ? '1%' : '0%'
     },
 
     imgStyle: {

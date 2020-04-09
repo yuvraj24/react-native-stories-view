@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   },
   imgStyle: {
     width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
+    height: Dimensions.get("window").width,
     alignSelf: 'center',
-    resizeMode: 'cover'
+    resizeMode: 'stretch'
   }
 });
