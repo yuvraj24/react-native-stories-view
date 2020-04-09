@@ -12,6 +12,8 @@ import {
 
 // @ts-ignore
 import {StoryContainer, ProgressBar} from 'react-native-stories-view';
+// import StoryContainer from './src/stories/StoryContainer';
+// import ProgressBar from './src/stories/ProgressView';
 
 import {MID_GREEN, BLACK, LIGHT_GREEN, BAR_ACTIVE_COLOR, BAR_INACTIVE_COLOR, TINT_GRAY} from './colors';
 
