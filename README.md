@@ -3,13 +3,29 @@
 [![npm version](https://badge.fury.io/js/react-native-stories-view.svg?style=flat)](https://www.npmjs.com/package/react-native-stories-view) 
 ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-green.svg) 
 
-A simple and fully customizable React Native component that implements a status/stories view like Whatsapp, Instagram.
+A simple and fully customizable React Native components that provides a status/stories feature like Whatsapp, Instagram. For navigating across all the stories you can touch the left or right portion of the screen. The library works seemleslly across both Android as well as IOS platform developed with love in *<b>Typescript & React</b>*.
 
-Feature's include :
+#### Feature's include :
+
 * Progress bar with custom duration & styling options.
 * Story Image view with custom styling options.
-* A fully customizable Header View
-* A fully customizable Footer View 
+* A fully customizable Header View, you can use default one or pass in your choice of component.
+* A fully customizable Footer View, you can use default one or pass in your choice of component.
+
+## Spread Your ❤️:
+[![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpandey24.svg?style=social)](https://twitter.com/yuvrajpandey24)
+
+## Demo
+
+Example One                |  Example Two
+:-------------------------:|:-------------------------:
+<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/stories.gif' width=800 height=800 /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/storyView.gif' width=800 height=800 /> 
+
+## Screenshot
+
+|Example One                |  Example Two              | Example Three               |  Example Four             |
+|-------------------------|-------------------------|-------------------------|-------------------------|
+|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo1.png'   /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo2.png'   /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo3.png'   /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo4.png'   /> |
 
 ## Installation
 
@@ -196,3 +212,12 @@ However if neither of the prop i.e 'replyView' or 'footerComponent' is passed th
 | onReplyTextChange      |    `String`      | Callback function that returns user entered text |    Optional    |
 | onReplyButtonClick     |    `String`      | Callback function for emoji & send button click  |    Optional    | 
 | footerComponent        |    `Conponent`   | Custom component                                 |    Optional    | 
+
+## About Me
+
+### Yuvraj Pandey
+I am a passionate Engineer which likes to push himself on various fronts of technologies.  
+
+For more exciting updates follow me,
+
+<a href="https://twitter.com/yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/twitter.png" width="40" height="40"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/linkedin.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/github.png" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://medium.com/@yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/medium.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/apps/developer?id=Yuvraj+Pandey"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/playstore.png" width="40" height="40"></a>
