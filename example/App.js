@@ -74,7 +74,7 @@ export default App = () => {
           visible={true}
           enableProgress={false}
           images={images}
-          duration={20}
+          duration={5}
           containerStyle={{
             width: '100%',
             height: '100%',
