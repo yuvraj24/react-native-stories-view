@@ -2,6 +2,10 @@
   "name": "react-native-stories-view",
   "version": "1.0.5",
   "description": "A simple and fully customizable React Native component that implements a status/stories view like Whatsapp, Instagram",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvraj24/react-native-stories-view.git"
+  },
   "keywords": [
     "react-native",
     "react component",
@@ -18,9 +22,15 @@
     "Whatsapp",
     "Instagram",
     "cross platform",
-    "cross-platform"
+    "cross-platform",
+    "typescript",
+    "hooks"
   ],
   "author": "Yuvraj Pandey",
+  "bugs": {
+    "url": "https://github.com/yuvraj24/react-native-stories-view/issues"
+  },
+  "homepage": "https://github.com/yuvraj24/react-native-stories-view#readme",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
