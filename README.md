@@ -11,7 +11,7 @@ A simple and fully customizable React Native components that provides a status/s
 * Story Image view with custom styling options.
 * A fully customizable Header View, you can use default one or pass in your choice of component.
 * A fully customizable Footer View, you can use default one or pass in your choice of component.
-
+<br>
 
 ## Spread Your ❤️:
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpandey24.svg?style=social)](https://twitter.com/yuvrajpandey24)
@@ -19,16 +19,16 @@ A simple and fully customizable React Native components that provides a status/s
 
 ## Demo
 
-Example One                |  Example Two
+IOS                        |  Android
 :-------------------------:|:-------------------------:
-<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/reactStory.gif' width=800 height=800 /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/stories.gif' width=800 height=800 />  
+[](assets/storyView.gif) | [](assets/androidStory.gif)  
 <br>
 
-## Screenshot
+## Screenshots
 
 |Example One                |  Example Two              | Example Three               |  Example Four             |
 |-------------------------|-------------------------|-------------------------|-------------------------|
-|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo1.png'   /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo2.png'   /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo3.png'   /> | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/photo4.png'   /> |
+|[](assets/photo1.png) | [](assets/photo5.png) | [](assets/photo3.png) | [](assets/photo4.png) |
 <br>
 
 ## Installation
@@ -62,7 +62,7 @@ This individual component can be used to display progressive bar with controlled
    barStyle={{
       barActiveColor: BAR_ACTIVE_COLOR,
       barInActiveColor: BAR_INACTIVE_COLOR,
-      barWidth: 100,
+      barWidth: 100, 
       barHeight: 4
    }}
 />
@@ -132,7 +132,7 @@ In case neither of the prop i.e `userProfile` or `headerComponent` is passed the
 #### Footer View
 
 The in built footer view provides you with a reply option where in you can accept user input for the status user just viewed.
-`isShowReply` boolean prop can be used to programaically show or hide the footer reply view.
+`isShowReply` boolean prop can be used to programaically show or hide the footer reply view. The `onReplyTextChange` & `onReplyButtonClick` function provides callback for the action performed by the user along with the `progressIndex` of the particular story currently viewed.
 
 ```js
 // Reply option in Footer
@@ -143,17 +143,17 @@ The in built footer view provides you with a reply option where in you can accep
    duration={20} 
    replyView={{
       isShowReply: true,
-      onReplyTextChange: (textReply) => {
-         console.log(textReply);
+      onReplyTextChange: (textReply, progressIndex) => {
+          console.log(`Text : ${textReply} , position : ${progressIndex}`);
       },
-      onReplyButtonClick: (buttonType) => {
+      onReplyButtonClick: (buttonType, progressIndex) => {
          switch (buttonType) {
             case 'send':
-               console.log('Send button tapped');
+               console.log(`Send button tapped for position : ${progressIndex}`);
                break;
 
              case 'smiley':
-               console.log('Smiley button tapped');
+               console.log(`Smiley button tapped for position : ${progressIndex}`);
                break;
           }
        },
@@ -188,6 +188,10 @@ However if neither of the prop i.e `replyView` or `footerComponent` is passed th
 | enableProgress         |    `Boolean`     | Start/Stop the progress bar motion               |  Optional      | 
 | duration               |    `Number`      | Control's the speed of progress bar              |  Optional      |
 | barStyle               |    `Object`      | Progress Bar style                               |   Optional     | 
+| barActiveColor         |    `String`      | Active progress color                            |   Optional     | 
+| barInActiveColor       |    `String`      | In Active progress color                         |   Optional     | 
+| barWidth               |    `number`      | Default 100, Always > 10 but < 100               |   Optional     | 
+| barHeight              |    `number`      | Default 7, Always > 4 but < 10                   |   Optional     | 
 | onChange               |    `Function`    | Function executes after change in progressIndex  |    Optional    | 
 
 ### Basic
@@ -210,7 +214,7 @@ However if neither of the prop i.e `replyView` or `footerComponent` is passed th
 | userMessage            |    `String`      | Display's user information                       |    Optional    |
 | imageArrow             |    `String`      | Image Url                                        |    Optional    | 
 | onImageClick           |    `Function`    | Function that executes imageArrow click event    |    Optional    | 
-| headerComponent        |    `Conponent`   | Custom component                                 |    Optional    | 
+| headerComponent        |    `Component`   | Custom component                                 |    Optional    | 
 
 ### Footer
 
@@ -218,9 +222,9 @@ However if neither of the prop i.e `replyView` or `footerComponent` is passed th
 | :--------------------- | :--------------: | :---------------------------------------------   | :------------: |
 | replyView              |    `Object`      | Default reply view with Input text               |    Optional    |
 | isShowReply            |    `Object`      | Toggle's the display of footer view              |    Mandatory   |
-| onReplyTextChange      |    `String`      | Callback function that returns user entered text |    Optional    |
-| onReplyButtonClick     |    `String`      | Callback function for emoji & send button click  |    Optional    | 
-| footerComponent        |    `Conponent`   | Custom component                                 |    Optional    | 
+| onReplyTextChange      |    `String`      | Callback for user entered text with posotion     |    Optional    |
+| onReplyButtonClick     |    `String`      | Callback for emoji & send click with posotion    |    Optional    | 
+| footerComponent        |    `Component`   | Custom component                                 |    Optional    | 
 <br> 
 
 ## About Me
