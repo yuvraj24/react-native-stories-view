@@ -1,7 +1,7 @@
 # React Native Stories View ⚡
 
 [![npm version](https://badge.fury.io/js/react-native-stories-view.svg?style=flat)](https://www.npmjs.com/package/react-native-stories-view) 
-![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-green.svg) 
+![Platform - Android and IOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-green.svg) 
 
 A simple and fully customizable React Native components that provides a status/stories feature like Whatsapp, Instagram. For navigation across all the stories you can touch the left or right portion of the screen similar to what we see on Whatsapp or Instagram. The library works seemleslly across both Android as well as IOS platform developed with ❤️ in <b>Typescript & React</b> 🔥.
 
@@ -11,10 +11,15 @@ A simple and fully customizable React Native components that provides a status/s
 * Story Image view with custom styling options.
 * A fully customizable Header View, you can use default one or pass in your choice of component.
 * A fully customizable Footer View, you can use default one or pass in your choice of component.
+<br>
+
+
+![](assets/storybg.jpeg)
+<br>
 
 ## Spread Your ❤️:
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpandey24.svg?style=social)](https://twitter.com/yuvrajpandey24)
-<br><br>
+<br>
 
 ## Demo
 
