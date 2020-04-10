@@ -9,8 +9,7 @@ import {
   Text,
   Dimensions,
 } from 'react-native';
-
-// @ts-ignore
+ 
 import {StoryContainer, ProgressBar} from 'react-native-stories-view';
 // import StoryContainer from './src/stories/StoryContainer';
 // import ProgressBar from './src/stories/ProgressView';
@@ -32,7 +31,7 @@ const images = [
   'https://boostupliving.com/wp-content/uploads/2019/06/best-motivational-quote-mobile-wallpapers-53.jpg',
   'https://i.pinimg.com/originals/51/bd/4c/51bd4c1e72d5d6ae5f2a4f31e31d2ef5.jpg',
   'https://pumpernickelpixie.com/wp-content/uploads/2016/01/15-phone-wallpaper.jpg',
-  'https://i.pinimg.com/originals/5a/f0/e5/5af0e538f7437fd13a73f7c96601ccb6.jpg', 
+  'https://i.pinimg.com/originals/5a/f0/e5/5af0e538f7437fd13a73f7c96601ccb6.jpg',
 ];
 
 export default App = () => {
@@ -54,8 +53,9 @@ export default App = () => {
       )}
 
       <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
+        {/*
         // Individual ProgressBar component
-        {/* <ProgressBar
+        <ProgressBar
           images={images}
           onChange={() => {}}
           progressIndex={2}
@@ -68,8 +68,8 @@ export default App = () => {
             barHeight: 4, // always in number
           }}
         /> */}
-
-        // Individual Story View component
+        
+        {/* Individual Story View component */}
         <StoryContainer
           visible={true}
           enableProgress={false}
@@ -79,7 +79,6 @@ export default App = () => {
             width: '100%',
             height: '100%',
           }}
-
           // Inbuilt User Information in header
           userProfile={{
             userImage: PROFILE,
@@ -97,22 +96,21 @@ export default App = () => {
           // Inbuilt Reply option  in Footer
           replyView={{
             isShowReply: true,
-            onReplyTextChange: (textReply) => {
-              console.log(textReply);
+            onReplyTextChange: (textReply, progressIndex) => {
+              console.log(`Text : ${textReply} , position : ${progressIndex}`);
             },
-            onReplyButtonClick: (buttonType) => {
+            onReplyButtonClick: (buttonType, progressIndex) => {
               switch (buttonType) {
                 case 'send':
-                  console.log('Send button tapped');
+                  console.log(`Send button tapped for position : ${progressIndex}`);
                   break;
 
                 case 'smiley':
-                  console.log('Smiley button tapped');
+                  console.log(`Smiley button tapped for position : ${progressIndex}`);
                   break;
               }
             },
           }}
-
           // Custom Footer component option
           // footerComponent={<View />}
 
@@ -127,7 +125,7 @@ export default App = () => {
           // Story Image style options
           imageStyle={{
             width: Dimensions.get('window').width, // always in number
-            height: Dimensions.get('window').height, // always in number 
+            height: Dimensions.get('window').height, // always in number
           }}
         />
       </SafeAreaView>
