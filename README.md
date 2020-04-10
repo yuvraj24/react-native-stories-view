@@ -19,16 +19,16 @@ A simple and fully customizable React Native components that provides a status/s
 
 ## Demo
 
-IOS                        |  Android
-:-------------------------:|:-------------------------:
-[](assets/storyView.gif) | [](assets/androidStory.gif)  
+|IOS                       |  Android                 |
+-------------------------|--------------------------|
+|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/stories.gif' height=600 width=600 />    | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/androidStory.gif' height=600 width=600 />  |
 <br>
 
 ## Screenshots
 
-|Example One                |  Example Two              | Example Three               |  Example Four             |
-|-------------------------|-------------------------|-------------------------|-------------------------|
-|[](assets/photo1.png) | [](assets/photo5.png) | [](assets/photo3.png) | [](assets/photo4.png) |
+|Example One                |  Example Two              | Example Three               |  Example Four       | Example Five   |
+|-------------------------|-------------------------|-------------------------|-------------------------|-------------------|
+|![](assets/photo1.png) | ![](assets/photo2.png) | ![](assets/photo4.png) | ![](assets/photo3.png) |![](assets/photo5.png) |
 <br>
 
 ## Installation
