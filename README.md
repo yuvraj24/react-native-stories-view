@@ -47,6 +47,8 @@ npm i react-native-stories-view
 
 ## Usage
 
+For example code, <a href='https://github.com/yuvraj24/react-native-stories-view/tree/master/example'><b>Click here</b></a>
+
 * ### ProgressBar
 
 This individual component can be used to display progressive bar with controlled duration, style & motion. To programatically enable or disable the progress pass boolean value to `enableProgress` & to change the position of progress use `progressIndex` prop along with `duration` prop to control the motion. On every change of propress position `onChange` function will be invoked for any customization.
