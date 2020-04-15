@@ -3,6 +3,9 @@
 [![npm version](https://badge.fury.io/js/react-native-stories-view.svg?style=flat)](https://www.npmjs.com/package/react-native-stories-view) 
 ![Platform - Android and IOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-green.svg) 
 
+![](assets/storybg.jpeg)
+<br>
+
 A simple and fully customizable React Native components that provides a status/stories feature like Whatsapp, Instagram. For navigation across all the stories you can touch the left or right portion of the screen similar to what we see on Whatsapp or Instagram. The library works seemleslly across both Android as well as IOS platform developed with ❤️ in <b>Typescript & React</b> 🔥.
 
 #### Feature's include :
@@ -11,21 +14,17 @@ A simple and fully customizable React Native components that provides a status/s
 * Story Image view with custom styling options.
 * A fully customizable Header View, you can use default one or pass in your choice of component.
 * A fully customizable Footer View, you can use default one or pass in your choice of component.
-<br>
-
-
-![](assets/storybg.jpeg)
-<br>
+<br> 
 
 ## Spread Your ❤️:
-[![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpandey24.svg?style=social)](https://twitter.com/yuvrajpandey24)
+[![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpandey24)
 <br>
 
 ## Demo
 
 |IOS                       |  Android                 |
 -------------------------|--------------------------|
-|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/stories.gif' height=700 width=800 />    | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/androidStory.gif' height=700 width=800 />  |
+|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/stories.gif' height=900 width=800 />    | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/androidStory.gif' height=900 width=800 />  |
 <br>
 
 ## Screenshots
@@ -240,4 +239,4 @@ However if neither of the prop i.e `replyView` or `footerComponent` is passed th
 
 For more exciting updates follow me,
 
-<a href="https://twitter.com/yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/twitter.png" width="40" height="40"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/linkedin.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/github.png" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://medium.com/@yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/medium.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/apps/developer?id=Yuvraj+Pandey"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/playstore.png" width="40" height="40"></a>
+<a href="https://twitter.com/yuvrajpy24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/twitter.png" width="40" height="40"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/linkedin.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/github.png" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://medium.com/@yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/medium.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/apps/developer?id=Yuvraj+Pandey"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/playstore.png" width="40" height="40"></a>
