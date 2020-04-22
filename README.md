@@ -17,7 +17,7 @@ A simple and fully customizable React Native components that provides a status/s
 <br> 
 
 ## Spread Your ❤️:
-[![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpandey24)
+[![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
 <br>
 
 ## Demo
