@@ -1,7 +1,7 @@
 # React Native Stories View ⚡
 
 [![npm version](https://badge.fury.io/js/react-native-stories-view.svg?style=flat)](https://www.npmjs.com/package/react-native-stories-view) 
-![Platform - Android and IOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-green.svg) 
+![Platform - Android and IOS](https://img.shields.io/badge/platform-Android%20%7C%20IOS%20%7C%20Web-green.svg) 
 
 ![](assets/storybg.jpeg)
 <br>
