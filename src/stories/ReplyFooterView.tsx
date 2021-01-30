@@ -73,7 +73,7 @@ const ReplyFooterView = ({ progressIndex, onReplyButtonClick, onReplyTextChange 
             {
                 !showReply && (
                     <View style={styles.innerDiv}>
-                        <TouchableOpacity style={styles.imgStyle} onPress={() => onReplyButtonClick && onReplyButtonClick('smiley')}>
+                        <TouchableOpacity style={styles.imgStyle} onPress={() => onReplyButtonClick && onReplyButtonClick('smiley', progressIndex)}>
                             <Image style={styles.imgStyle} source={SMILEY} />
                         </TouchableOpacity>
                         <TextInput
@@ -83,8 +83,8 @@ const ReplyFooterView = ({ progressIndex, onReplyButtonClick, onReplyTextChange 
                             underlineColorAndroid='transparent'
                             placeholder={'Type a reply...'}
                             style={[styles.inputStyle, Platform.OS === 'android' ? { height: 20 } : null]}
-                            onChange={(event) => onReplyTextChange && onReplyTextChange(event.nativeEvent.text)} />
-                        <TouchableOpacity style={styles.imgStyle} onPress={() => onReplyButtonClick && onReplyButtonClick('send')}>
+                            onChange={(event) => onReplyTextChange && onReplyTextChange(event.nativeEvent.text, progressIndex)} />
+                        <TouchableOpacity style={styles.imgStyle} onPress={() => onReplyButtonClick && onReplyButtonClick('send', progressIndex)}>
                             <Image style={styles.imgStyle} source={SEND} />
                         </TouchableOpacity>
                     </View>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'center',
-        marginBottom: Platform.OS === 'android' ? '2%' : '0%'
+        marginBottom: Platform.OS === 'android' ? '1%' : '0%'
     },
 
     imgStyle: {

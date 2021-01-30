@@ -1,5 +1,5 @@
 import { CSSProperties, Component, FunctionComponent, FunctionComponentElement } from "react";
-import { ARROW_LEFT, ARROW_RIGHT } from '../utils/constant'
+import { ARROW_LEFT, ARROW_RIGHT } from './constant'
 import { StyleSheet, ViewStyle, ImageStyle, ImageSourcePropType, ImageURISource } from "react-native";
 
 export interface CommonProps {
@@ -28,7 +28,9 @@ export interface StoryContainerProps extends CommonProps {
     userProfile?: UserProps | undefined
 
     replyView?: ReplyProps | undefined 
-    footerComponent?: FunctionComponentElement<CommonProps> | undefined  
+    footerComponent?: FunctionComponentElement<CommonProps> | undefined 
+
+    onComplete: Function,  
 }
 
 export interface ProgressViewProps extends CommonProps {

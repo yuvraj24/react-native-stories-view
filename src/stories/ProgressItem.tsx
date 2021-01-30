@@ -27,7 +27,7 @@ function ProgressItem(props: ProgressItemProps) {
   React.useEffect(() => {
     if (props.enableProgress) {
       if (progress >= 0 && progress < OFFSET) {
-        if (progress == OFFSET - 1) {
+        if (progress == OFFSET - 2) {
           isValid = true
         }
         if (!isBlock) {
