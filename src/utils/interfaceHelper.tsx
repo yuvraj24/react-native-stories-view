@@ -28,7 +28,9 @@ export interface StoryContainerProps extends CommonProps {
     userProfile?: UserProps | undefined
 
     replyView?: ReplyProps | undefined 
-    footerComponent?: FunctionComponentElement<CommonProps> | undefined  
+    footerComponent?: FunctionComponentElement<CommonProps> | undefined 
+
+    onComplete: Function,  
 }
 
 export interface ProgressViewProps extends CommonProps {
