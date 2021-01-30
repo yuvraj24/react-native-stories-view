@@ -63,7 +63,7 @@ This individual component can be used to display progressive bar with controlled
    onChange={() => {}}
    progressIndex={0}
    enableProgress={true}
-   duration={20}
+   duration={20} 
    barStyle={{
       barActiveColor: BAR_ACTIVE_COLOR,
       barInActiveColor: BAR_INACTIVE_COLOR,
@@ -89,6 +89,7 @@ import { StoryContainer } from 'react-native-stories-view';
    enableProgress={true}
    images={images}
    duration={20}  
+   onComplete={() => alert("onComplete")}
    containerStyle={{
        width: '100%',
        height: '100%',
@@ -107,6 +108,7 @@ You can use the inbuilt header view which can display basic user details by simp
    enableProgress={true}
    images={images}
    duration={20} 
+   onComplete={() => alert("onComplete")}
    userProfile={{
       userImage: PROFILE,
       userName: 'Yuvraj Pandey',
@@ -127,6 +129,7 @@ However if you wish to add your own custom component, you can pass your own comp
    visible={true}
    enableProgress={true}
    images={images}
+   onComplete={() => alert("onComplete")}
    duration={20} 
    headerComponent={<View />}
 />
@@ -146,6 +149,7 @@ The in built footer view provides you with a reply option where in you can accep
    enableProgress={true}
    images={images}
    duration={20} 
+   onComplete={() => alert("onComplete")}
    replyView={{
       isShowReply: true,
       onReplyTextChange: (textReply, progressIndex) => {
@@ -174,7 +178,8 @@ If you have your own custom component to use in Footer, simply pass your compone
    visible={true}
    enableProgress={true}
    images={images}
-   duration={20}     
+   duration={20} 
+   onComplete={() => alert("onComplete")}
    footerComponent={<View />}
 />
 ```
@@ -208,6 +213,7 @@ However if neither of the prop i.e `replyView` or `footerComponent` is passed th
 | images                 |  `Array<String>` | Story Images                                     |  Mandatory     |
 | duration               |    `Number`      | Control's the speed of progress bar              |  Optional      |
 | containerStyle         |    `Object`      | Container style                                  |   Optional     | 
+| onComplete             |    `Function`    | Function executes after all status is completed  |    Optional    | 
 
 ### Header
 
