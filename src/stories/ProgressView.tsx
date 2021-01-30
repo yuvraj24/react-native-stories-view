@@ -21,7 +21,7 @@ function ProgressView(props: ProgressViewProps) {
     if (props.enableProgress) {
       if (progressIndex < props.images.length) {
         const mProgress = progressIndex + 1
-        console.log("changePosition " + mProgress) 
+        // console.log("changePosition " + mProgress) 
         props.onChange(mProgress)
 
         setTimeout(() => {
@@ -29,6 +29,7 @@ function ProgressView(props: ProgressViewProps) {
         }, 1500)
       }
     } else {
+      // TODO (compare with web version)
       setProgressIndex(progressIndex)
     }
   }

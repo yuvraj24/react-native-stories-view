@@ -9,10 +9,10 @@ import {
   Text,
   Dimensions,
 } from 'react-native';
- 
-import {StoryContainer, ProgressBar} from 'react-native-stories-view';
-// import StoryContainer from './src/stories/StoryContainer';
-// import ProgressBar from './src/stories/ProgressView';
+
+// import {StoryContainer, ProgressBar} from 'react-native-stories-view';
+import StoryContainer from './src/stories/StoryContainer';
+import ProgressBar from './src/stories/ProgressView';
 
 import {
   MID_GREEN,
@@ -34,7 +34,7 @@ const images = [
   'https://i.pinimg.com/originals/5a/f0/e5/5af0e538f7437fd13a73f7c96601ccb6.jpg',
 ];
 
-export default App = () => {
+const App = () => {
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
       {Platform.OS === 'ios' && (
@@ -68,7 +68,6 @@ export default App = () => {
             barHeight: 4, // always in number
           }}
         /> */}
-        
         {/* Individual Story View component */}
         <StoryContainer
           visible={true}
@@ -102,11 +101,15 @@ export default App = () => {
             onReplyButtonClick: (buttonType, progressIndex) => {
               switch (buttonType) {
                 case 'send':
-                  console.log(`Send button tapped for position : ${progressIndex}`);
+                  console.log(
+                    `Send button tapped for position : ${progressIndex}`,
+                  );
                   break;
 
                 case 'smiley':
-                  console.log(`Smiley button tapped for position : ${progressIndex}`);
+                  console.log(
+                    `Smiley button tapped for position : ${progressIndex}`,
+                  );
                   break;
               }
             },
@@ -121,16 +124,18 @@ export default App = () => {
             barWidth: 100, // always in number
             barHeight: 4, // always in number
           }}
-
           // Story Image style options
           imageStyle={{
             width: Dimensions.get('window').width, // always in number
             height: Dimensions.get('window').height, // always in number
           }}
+
+          //Callback when status view completes
+          onComplete={() => alert("onComplete")}
         />
       </SafeAreaView>
     </View>
   );
 };
 
-// export default App;
+export default App;

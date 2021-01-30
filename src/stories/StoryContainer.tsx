@@ -52,7 +52,7 @@ const StoryContainer = (props: StoryContainerProps) => {
   }
 
   function onChange(position: number) {
-    if (props.enableProgress ? props.enableProgress : true && !stopProgress) {
+    if (props.enableProgress != undefined ? props.enableProgress : true && !stopProgress) {
       if (position < props.images.length) {
         setProgressIndex(position)
       }
@@ -132,7 +132,7 @@ const StoryContainer = (props: StoryContainerProps) => {
 
       <View style={styles.progressView}>
         <ProgressView
-          enableProgress={props.enableProgress ? props.enableProgress : true && !stopProgress}
+          enableProgress={props.enableProgress != undefined ? props.enableProgress : true && !stopProgress}
           images={props.images}
           duration={props.duration ? props.duration : DEFAULT_DURATION}
           barStyle={props.barStyle}
