@@ -1,63 +1,63 @@
 {
-  "name": "react-native-stories-view",
-  "version": "1.0.7",
-  "description": "A simple and fully customizable React Native component that implements a status/stories view like Whatsapp, Instagram",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuvraj24/react-native-stories-view.git"
-  },
-  "keywords": [
-    "react-native",
-    "react component",
-    "react native component",
-    "react",
-    "react native",
-    "mobile",
-    "ios",
-    "android",
-    "ui",
-    "story",
-    "stories",
-    "status",
-    "Whatsapp",
-    "Instagram",
-    "cross platform",
-    "cross-platform",
-    "typescript",
-    "hooks"
-  ],
-  "author": "Yuvraj Pandey",
-  "bugs": {
-    "url": "https://github.com/yuvraj24/react-native-stories-view/issues"
-  },
-  "homepage": "https://github.com/yuvraj24/react-native-stories-view#readme",
-  "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
-  },
-  "peerDependencies": {
-    "react": "16.11.0",
-    "react-native": "0.62.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/runtime": "^7.9.2",
-    "@react-native-community/eslint-config": "^1.0.0",
-    "@types/jest": "^25.2.1",
-    "@types/react": "^16.9.32",
-    "@types/react-native": "^0.62.1",
-    "@types/react-test-renderer": "^16.9.2",
-    "babel-jest": "^25.2.6",
-    "eslint": "^6.8.0",
-    "jest": "^25.2.7",
-    "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.11.0",
-    "typescript": "^3.8.3"
-  },
-  "jest": {
-    "preset": "react-native"
-  }
+	"name": "react-native-stories-view",
+	"version": "1.0.8",
+	"description": "A simple and fully customizable React Native component that implements a status/stories view like Whatsapp, Instagram",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yuvraj24/react-native-stories-view.git"
+	},
+	"keywords": [
+		"react-native",
+		"react component",
+		"react native component",
+		"react",
+		"react native",
+		"mobile",
+		"ios",
+		"android",
+		"ui",
+		"story",
+		"stories",
+		"status",
+		"Whatsapp",
+		"Instagram",
+		"cross platform",
+		"cross-platform",
+		"typescript",
+		"hooks"
+	],
+	"author": "Yuvraj Pandey",
+	"bugs": {
+		"url": "https://github.com/yuvraj24/react-native-stories-view/issues"
+	},
+	"homepage": "https://github.com/yuvraj24/react-native-stories-view#readme",
+	"scripts": {
+		"android": "react-native run-android",
+		"ios": "react-native run-ios",
+		"start": "react-native start",
+		"test": "jest",
+		"lint": "eslint ."
+	},
+	"peerDependencies": {
+		"react": "16.11.0",
+		"react-native": "0.62.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/runtime": "^7.9.2",
+		"@react-native-community/eslint-config": "^1.0.0",
+		"@types/jest": "^25.2.1",
+		"@types/react": "^16.9.32",
+		"@types/react-native": "^0.62.1",
+		"@types/react-test-renderer": "^16.9.2",
+		"babel-jest": "^25.2.6",
+		"eslint": "^6.8.0",
+		"jest": "^25.2.7",
+		"metro-react-native-babel-preset": "^0.59.0",
+		"react-test-renderer": "16.11.0",
+		"typescript": "^3.8.3"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
 }
