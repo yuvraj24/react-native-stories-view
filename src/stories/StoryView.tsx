@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 	},
 	imgStyle: {
 		width: Dimensions.get("window").width,
-		height: Dimensions.get("window").width,
+		height: Dimensions.get("window").height,
 		alignSelf: "center",
 		resizeMode: "stretch",
 	},

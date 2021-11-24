@@ -73,7 +73,9 @@ const StoryContainer = (props: StoryContainerProps) => {
 			if (position < props.images.length) {
 				setProgressIndex(position);
 			} else {
-				props.onComplete();
+				if (typeof props.onComplete === "function") {
+					props.onComplete();
+				}
 			}
 		}
 	}
