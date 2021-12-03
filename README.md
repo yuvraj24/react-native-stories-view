@@ -24,7 +24,7 @@ A simple and fully customizable React Native components that provides a status/s
 
 |IOS                       |  Android                 |
 -------------------------|--------------------------|
-|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/stories.gif' height=900 width=800 />    | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/androidStory.gif' height=900 width=800 />  |
+|<img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/reactStory.gif' height=900 width=800 />    | <img src='https://github.com/yuvraj24/react-native-stories-view/blob/master/assets/androidStory.gif' height=900 width=800 />  |
 <br>
 
 ## Screenshots
