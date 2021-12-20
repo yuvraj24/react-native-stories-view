@@ -1,13 +1,10 @@
 import React, {
 	useState,
-	StyleHTMLAttributes,
-	HtmlHTMLAttributes,
-	CSSProperties,
 	useEffect,
-} from "react";
-import ProgressView from "./ProgressView";
-import StoryView from "./StoryView";
-import { StoryContainerProps } from "../utils/interfaceHelper";
+} from 'react';
+import ProgressView from './ProgressView';
+import StoryView from './StoryView';
+import { StoryContainerProps } from '../utils/interfaceHelper';
 import {
 	StyleSheet,
 	View,
@@ -17,25 +14,24 @@ import {
 	Alert,
 	KeyboardAvoidingView,
 	Dimensions,
-} from "react-native";
-import { GREEN, LIGHT_GRAY_0, RED, TINT_GRAY, GRAY } from "../utils/colors";
-import ArrowNavigator from "./ArrowNavigator";
-import ReplyFooterView from "./ReplyFooterView";
-import UserHeaderView from "./UserHeaderView";
-import { DEFAULT_DURATION } from "../utils/constant";
+} from 'react-native';
+import { TINT_GRAY } from '../utils/colors';
+import ArrowNavigator from './ArrowNavigator';
+import ReplyFooterView from './ReplyFooterView';
+import UserHeaderView from './UserHeaderView';
+import { DEFAULT_DURATION } from '../utils/constant';
 
 const StoryContainer = (props: StoryContainerProps) => {
 	const [progressIndex, setProgressIndex] = useState(0);
 	const [stopProgress, setStopProgress] = useState(false);
 
 	useEffect(() => {
-		// Alert.prompt("Called")
 		setProgressIndex(progressIndex);
 	}, [props.enableProgress]);
 
 	useEffect(() => {
-		let listener1 = Keyboard.addListener("keyboardDidShow", onShowKeyboard);
-		let listener2 = Keyboard.addListener("keyboardDidHide", onHideKeyboard);
+		let listener1 = Keyboard.addListener('keyboardDidShow', onShowKeyboard);
+		let listener2 = Keyboard.addListener('keyboardDidHide', onHideKeyboard);
 
 		return () => {
 			listener1.remove();
@@ -53,11 +49,11 @@ const StoryContainer = (props: StoryContainerProps) => {
 
 	function onArrorClick(type: string) {
 		switch (type) {
-			case "left":
+			case 'left':
 				onChange(progressIndex === 0 ? progressIndex : progressIndex - 1);
 				break;
 
-			case "right":
+			case 'right':
 				const size = props.imageStyle ? props.images.length - 1 : 0;
 				onChange(progressIndex === size ? progressIndex : progressIndex + 1);
 				break;
@@ -73,7 +69,7 @@ const StoryContainer = (props: StoryContainerProps) => {
 			if (position < props.images.length) {
 				setProgressIndex(position);
 			} else {
-				if (typeof props.onComplete === "function") {
+				if (typeof props.onComplete === 'function') {
 					props.onComplete();
 				}
 			}
@@ -82,13 +78,13 @@ const StoryContainer = (props: StoryContainerProps) => {
 
 	return (
 		<SafeAreaView>
-			{Platform.OS === "ios" && (
+			{Platform.OS === 'ios' && (
 				<KeyboardAvoidingView behavior='padding'>
 					<View>{props.visible ? getView() : <View></View>}</View>
 				</KeyboardAvoidingView>
 			)}
 
-			{Platform.OS === "android" && (
+			{Platform.OS === 'android' && (
 				<View>{props.visible ? getView() : <View></View>}</View>
 			)}
 		</SafeAreaView>
@@ -161,43 +157,41 @@ export default StoryContainer;
 
 const styles = StyleSheet.create({
 	parentView: {
-		width: "100%",
-		height: "100%",
-		flexDirection: "column",
+		width: '100%',
+		height: '100%',
+		flexDirection: 'column',
 		backgroundColor: TINT_GRAY,
-		// marginTop: Platform.OS === 'ios' ? -40 : 0
 	},
 	customView: {
-		position: "absolute",
-		flexDirection: "column",
-		width: Dimensions.get("window").width, // Important
-		height: "100%",
+		position: 'absolute',
+		flexDirection: 'column',
+		width: Dimensions.get('window').width,
+		height: '100%',
 	},
 	topView: {
-		position: "absolute",
-		flexDirection: "column",
-		width: Dimensions.get("window").width, // Important
-		paddingTop: "3%",
+		position: 'absolute',
+		flexDirection: 'column',
+		width: Dimensions.get('window').width,
+		paddingTop: '3%',
 	},
 	bottomView: {
-		position: "absolute",
+		position: 'absolute',
 		bottom: 0,
 		left: 0,
 		right: 0,
-		width: "100%",
-		flexDirection: "column",
-		justifyContent: "center",
-		alignSelf: "baseline",
-		textAlignVertical: "bottom",
-		paddingTop: "3%",
-		paddingBottom: "2%",
-		// backgroundColor: TINT_GRAY,
+		width: '100%',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignSelf: 'baseline',
+		textAlignVertical: 'bottom',
+		paddingTop: '3%',
+		paddingBottom: '2%',
 	},
 	progressView: {
 		flex: 1,
-		width: Dimensions.get("window").width, // Important
-		position: "absolute",
-		flexDirection: "row",
+		width: Dimensions.get('window').width,
+		position: 'absolute',
+		flexDirection: 'row',
 		backgroundColor: TINT_GRAY,
 	},
 });

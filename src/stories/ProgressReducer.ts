@@ -1,5 +1,3 @@
-import React from "react";
-
 export const initialState = {
 	progress: 0,
 	stopProgress: false,
@@ -10,8 +8,8 @@ type ActionType = {
 	payload: any;
 };
 
-export const PROGRESS = "PROGRESS",
-	STOP_PROGRESS = "STOP_PROGRESS";
+export const PROGRESS = 'PROGRESS',
+	STOP_PROGRESS = 'STOP_PROGRESS';
 
 export const progressReducer = (state: any, action: ActionType) => {
 	switch (action.type) {
