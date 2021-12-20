@@ -1,10 +1,10 @@
 {
 	"name": "react-native-stories-view",
-	"version": "1.0.9",
-	"description": "A simple and fully customizable React Native component that implements a status/stories view like Whatsapp, Instagram",
+	"version": "1.1.0",
+	"description": "[forked] A simple and fully customizable React Native component that implements a status/stories view like Whatsapp, Instagram",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/yuvraj24/react-native-stories-view.git"
+		"url": "git+https://github.com/fintual/react-native-stories-view.git"
 	},
 	"keywords": [
 		"react-native",
@@ -26,11 +26,8 @@
 		"typescript",
 		"hooks"
 	],
-	"author": "Yuvraj Pandey",
-	"bugs": {
-		"url": "https://github.com/yuvraj24/react-native-stories-view/issues"
-	},
-	"homepage": "https://github.com/yuvraj24/react-native-stories-view#readme",
+	"author": "(original) Yuvraj Pandey; Forked by Fintual",
+	"homepage": "https://github.com/fintual/react-native-stories-view#readme",
 	"scripts": {
 		"android": "react-native run-android",
 		"ios": "react-native run-ios",
