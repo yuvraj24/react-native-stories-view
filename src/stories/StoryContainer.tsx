@@ -15,7 +15,6 @@ import {
 	Dimensions,
 } from 'react-native';
 import ArrowNavigator from './ArrowNavigator';
-import ReplyFooterView from './ReplyFooterView';
 import UserHeaderView from './UserHeaderView';
 import { DEFAULT_DURATION } from '../utils/constant';
 
@@ -57,21 +56,29 @@ const StoryContainer = (props: StoryContainerProps) => {
 		if (options[type]) {
 			options[type]();
 		}
+
+		if (props.onArrowClick && props.onArrowClick[type]) {
+			props.onArrowClick[type]();
+		}
 	}
 
 	function onChange(position: number) {
-		if (
-			props.enableProgress != undefined
-				? props.enableProgress
-				: true && !stopProgress
-		) {
-			if (position < props.images.length) {
-				setProgressIndex(position);
-			} else {
-				if (typeof props.onComplete === 'function') {
-					props.onComplete();
-				}
-			}
+		const { enableProgress = false } = props;
+ 
+		const shouldUpdate = enableProgress || !stopProgress;
+
+		if (!shouldUpdate) {
+			return;
+		}
+
+		if (position < props.images.length) {
+			setProgressIndex(position);
+
+			return;
+		}
+
+		if (props.onComplete) {
+			props.onComplete();
 		}
 	}
 
@@ -79,15 +86,15 @@ const StoryContainer = (props: StoryContainerProps) => {
 		<SafeAreaView>
 			{
 				Platform.OS === 'ios' && (
-					<KeyboardAvoidingView behavior='padding'>
-						<View>{props.visible ? getView() : <View></View>}</View>
+					<KeyboardAvoidingView behavior="padding">
+						<View>{props.visible ? getView() : null}</View>
 					</KeyboardAvoidingView>
 				)
 			}
 
 			{
 				Platform.OS === 'android' && (
-					<View>{props.visible ? getView() : <View></View>}</View>
+					<View>{props.visible ? getView() : null}</View>
 				)
 			}
 		</SafeAreaView>
@@ -119,33 +126,24 @@ const StoryContainer = (props: StoryContainerProps) => {
 								}
 							/>
 						)}
+
 						{!props.userProfile && props.headerComponent}
 					</View>
 	
-					<ArrowNavigator onArrowClick={(type: string) => onArrowClick(type)} />
+					<ArrowNavigator onArrowClick={onArrowClick} />
 
 					<View style={styles.bottomView}>
-						{props.replyView?.isShowReply && !props.footerComponent && (
-							<ReplyFooterView
-								progressIndex={progressIndex}
-								onReplyTextChange={props.replyView?.onReplyTextChange}
-								onReplyButtonClick={props.replyView?.onReplyButtonClick}
-							/>
-						)}
-						
-						{!props.replyView?.isShowReply && props.footerComponent && (
-							<View style={styles.bottomView}>{props.footerComponent}</View>
-						)}
+						{
+							props.footerComponent && (
+								<View style={styles.bottomView}>{props.footerComponent}</View>
+							)
+						}
 					</View>
 				</View>
 
 				<View style={styles.progressView}>
 					<ProgressView
-						enableProgress={
-							props.enableProgress != undefined
-								? props.enableProgress
-								: true && !stopProgress
-						}
+						enableProgress={props.enableProgress || !stopProgress}
 						images={props.images}
 						duration={props.duration ? props.duration : DEFAULT_DURATION}
 						barStyle={props.barStyle}

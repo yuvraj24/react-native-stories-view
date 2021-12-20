@@ -32,6 +32,7 @@ function ProgressView(props: ProgressViewProps) {
 	return (
 		<View style={styles.parent}>
 			<FlatList
+				key="progress-view-flat-list"
 				contentContainerStyle={styles.flatStyle}
 				pagingEnabled={true}
 				horizontal={true}
@@ -41,6 +42,7 @@ function ProgressView(props: ProgressViewProps) {
 				ItemSeparatorComponent={() => <View style={{ marginLeft: 4 }} />}
 				renderItem={({ item, index }) => (
 					<ProgressItem
+						key={`progress-item-${progressIndex}`}
 						enableProgress={props.enableProgress}
 						size={props.images.length}
 						duration={props.duration}

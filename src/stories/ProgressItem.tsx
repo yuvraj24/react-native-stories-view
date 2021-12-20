@@ -74,7 +74,7 @@ function ProgressItem(props: ProgressItemProps) {
 		const shouldBlockMultipleCallbacks = props.currentIndex === props.progressIndex;
 
 		if (shouldBlockMultipleCallbacks) {
-			if (props.progressIndex > 0) {
+			if (props.progressIndex != 0) {
 				blockProgress();
 				dispatch({ type: PROGRESS, payload: 0 });
 			} else {
