@@ -1,2 +1,4 @@
-export const BAR_INACTIVE_COLOR =  '#87888ACC',
+export const BLACK = '#282828',
+  WHITE = '#ffffff',
+  BAR_INACTIVE_COLOR =  '#87888ACC',
   BAR_ACTIVE_COLOR = WHITE
