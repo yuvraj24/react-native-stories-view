@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
-import { WHITE, TINT_GRAY } from '../utils/colors'; 
+import { WHITE } from '../utils/colors'; 
 import { UserProps } from '../utils/interfaceHelper';
 
 const UserHeaderView = ({ userImage, userName, userMessage, imageArrow, onImageClick }: UserProps) => {
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flexDirection: 'row',
     alignItems: 'flex-start', 
-    backgroundColor: TINT_GRAY, 
     paddingBottom: '3%'
   },
 

@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import ProgressItem from './ProgressItem';
-import {
-	TINT_GRAY,
-} from '../utils/colors';
 import { ProgressViewProps } from '../utils/interfaceHelper';
 import { View, StyleSheet, FlatList } from 'react-native';
 
@@ -69,7 +66,6 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		flexDirection: 'row',
 		flex: 1,
-		backgroundColor: TINT_GRAY,
 	},
 	flatStyle: {
 		flex: 1,
