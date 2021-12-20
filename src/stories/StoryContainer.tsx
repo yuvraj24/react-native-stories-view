@@ -11,7 +11,6 @@ import {
 	SafeAreaView,
 	Platform,
 	Keyboard,
-	Alert,
 	KeyboardAvoidingView,
 	Dimensions,
 } from 'react-native';
@@ -30,33 +29,34 @@ const StoryContainer = (props: StoryContainerProps) => {
 	}, [props.enableProgress]);
 
 	useEffect(() => {
-		let listener1 = Keyboard.addListener('keyboardDidShow', onShowKeyboard);
-		let listener2 = Keyboard.addListener('keyboardDidHide', onHideKeyboard);
+		const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', onShowKeyboard);
+		const keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', onHideKeyboard);
 
 		return () => {
-			listener1.remove();
-			listener2.remove();
+			keyboardDidShowListener.remove();
+			keyboardDidHideListener.remove();
 		};
 	}, []);
 
-	function onShowKeyboard(e: any) {
+	function onShowKeyboard() {
 		setStopProgress(true);
 	}
 
-	function onHideKeyboard(e: any) {
+	function onHideKeyboard() {
 		setStopProgress(false);
 	}
 
-	function onArrorClick(type: string) {
-		switch (type) {
-			case 'left':
-				onChange(progressIndex === 0 ? progressIndex : progressIndex - 1);
-				break;
-
-			case 'right':
+	function onArrowClick(type: string) {
+		const options = {
+			left: () => onChange(progressIndex === 0 ? progressIndex : progressIndex - 1),
+			right: () => {
 				const size = props.imageStyle ? props.images.length - 1 : 0;
 				onChange(progressIndex === size ? progressIndex : progressIndex + 1);
-				break;
+			}
+		};
+
+		if (options[type]) {
+			options[type]();
 		}
 	}
 
@@ -78,15 +78,19 @@ const StoryContainer = (props: StoryContainerProps) => {
 
 	return (
 		<SafeAreaView>
-			{Platform.OS === 'ios' && (
-				<KeyboardAvoidingView behavior='padding'>
-					<View>{props.visible ? getView() : <View></View>}</View>
-				</KeyboardAvoidingView>
-			)}
+			{
+				Platform.OS === 'ios' && (
+					<KeyboardAvoidingView behavior='padding'>
+						<View>{props.visible ? getView() : <View></View>}</View>
+					</KeyboardAvoidingView>
+				)
+			}
 
-			{Platform.OS === 'android' && (
-				<View>{props.visible ? getView() : <View></View>}</View>
-			)}
+			{
+				Platform.OS === 'android' && (
+					<View>{props.visible ? getView() : <View></View>}</View>
+				)
+			}
 		</SafeAreaView>
 	);
 
@@ -118,7 +122,8 @@ const StoryContainer = (props: StoryContainerProps) => {
 						)}
 						{!props.userProfile && props.headerComponent}
 					</View>
-					<ArrowNavigator onArrowClick={(type: string) => onArrorClick(type)} />
+	
+					<ArrowNavigator onArrowClick={(type: string) => onArrowClick(type)} />
 
 					<View style={styles.bottomView}>
 						{props.replyView?.isShowReply && !props.footerComponent && (
@@ -128,6 +133,7 @@ const StoryContainer = (props: StoryContainerProps) => {
 								onReplyButtonClick={props.replyView?.onReplyButtonClick}
 							/>
 						)}
+						
 						{!props.replyView?.isShowReply && props.footerComponent && (
 							<View style={styles.bottomView}>{props.footerComponent}</View>
 						)}

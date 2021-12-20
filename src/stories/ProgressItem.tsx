@@ -39,26 +39,28 @@ function ProgressItem(props: ProgressItemProps) {
 			: BAR_HEIGHT;
 
 	React.useEffect(() => {
-		if (props.enableProgress) {
-			if (progress >= 0 && progress < OFFSET) {
-				if (progress == OFFSET - 2) {
-					isValid = true;
-				}
-				if (!isBlock) {
-					startProgress();
-				} else {
-					isBlock = false;
-					dispatch({ type: PROGRESS, payload: progress + 1 });
-				}
+		if (!props.enableProgress) {
+			blockProgress();
+
+			return;
+		}
+
+		if (progress >= 0 && progress < OFFSET) {
+			if (progress == OFFSET - 2) {
+				isValid = true;
+			}
+			if (!isBlock) {
+				startProgress();
 			} else {
-				if (isValid) {
-					clearTimeout(listener);
-					isValid = false;
-					props.onChangePosition();
-				}
+				isBlock = false;
+				dispatch({ type: PROGRESS, payload: progress + 1 });
 			}
 		} else {
-			blockProgress();
+			if (isValid) {
+				clearTimeout(listener);
+				isValid = false;
+				props.onChangePosition();
+			}
 		}
 	}, [progress, props.enableProgress]);
 
