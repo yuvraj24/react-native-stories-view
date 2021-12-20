@@ -14,7 +14,6 @@ import {
 	KeyboardAvoidingView,
 	Dimensions,
 } from 'react-native';
-import { TINT_GRAY } from '../utils/colors';
 import ArrowNavigator from './ArrowNavigator';
 import ReplyFooterView from './ReplyFooterView';
 import UserHeaderView from './UserHeaderView';
@@ -166,7 +165,6 @@ const styles = StyleSheet.create({
 		width: '100%',
 		height: '100%',
 		flexDirection: 'column',
-		backgroundColor: TINT_GRAY,
 	},
 	customView: {
 		position: 'absolute',
@@ -198,6 +196,5 @@ const styles = StyleSheet.create({
 		width: Dimensions.get('window').width,
 		position: 'absolute',
 		flexDirection: 'row',
-		backgroundColor: TINT_GRAY,
 	},
 });
