@@ -1,13 +1,11 @@
-import React from "react";
-import { View, StyleSheet, Animated, Alert } from "react-native";
-import { ProgressiveImageProps } from "../utils/interfaceHelper";
-import { GREEN, TINT_GRAY } from "../utils/colors";
+import React from 'react';
+import { View, StyleSheet, Animated } from 'react-native';
+import { ProgressiveImageProps } from '../utils/interfaceHelper';
 
 const ProgressiveImageView = ({
 	thumbnailSource,
 	imgSource,
 	style,
-	props,
 }: ProgressiveImageProps) => {
 	const thumbnailAnimated = new Animated.Value(0);
 	const imageAnimated = new Animated.Value(0);
@@ -32,7 +30,6 @@ const ProgressiveImageView = ({
 				source={{ uri: thumbnailSource }}
 				style={[style, { opacity: thumbnailAnimated }]}
 				onLoad={() => handleThumbnailLoad()}
-				// blurRadius={1}
 			/>
 			<Animated.Image
 				source={{ uri: imgSource }}
@@ -43,19 +40,17 @@ const ProgressiveImageView = ({
 	);
 };
 
-// export default ProgressiveImageView;
-
 const styles = StyleSheet.create({
 	imageOverlay: {
-		position: "absolute",
+		position: 'absolute',
 		left: 0,
 		right: 0,
 		bottom: 0,
 		top: 0,
-		width: "100%",
-		height: "100%",
+		width: '100%',
+		height: '100%',
 	},
 	container: {
-		backgroundColor: "#e1e4e8",
+		backgroundColor: '#e1e4e8',
 	},
 });

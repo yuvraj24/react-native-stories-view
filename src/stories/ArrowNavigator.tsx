@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import { ArrowViewProps } from '../utils/interfaceHelper'
 import {
-    View, Image, StyleSheet, Keyboard, TouchableOpacity, TouchableHighlight, Text,
-    TouchableNativeFeedback, TouchableWithoutFeedback, Alert
+    View, StyleSheet, Keyboard, TouchableOpacity, Text,
 } from 'react-native'
-import { BAR_INACTIVE_COLOR, GRAY, GREEN, TINT_GRAY } from '../utils/colors'
 
 const ArrowNavigator: FunctionComponent<ArrowViewProps> = (props) => {
     return (
@@ -41,7 +39,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: '25%',
         flex: 1,
-        // backgroundColor:TINT_GRAY
     },
 
     imgLeftStyle: {

@@ -1,21 +1,13 @@
 import React, {
-	useEffect,
-	useState,
-	HtmlHTMLAttributes,
 	useReducer,
 } from "react";
 import {
-	GREEN,
-	GRAY,
-	LIGHT_GRAY,
-	LIGHT_GREEN,
 	BAR_INACTIVE_COLOR,
-	WHITE,
 	BAR_ACTIVE_COLOR,
 } from "../utils/colors";
 import { ProgressItemProps } from "../utils/interfaceHelper";
 import { progressReducer, initialState, PROGRESS } from "./ProgressReducer";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, } from "react-native";
 
 var isValid = true;
 var isBlock = false;
@@ -25,8 +17,6 @@ const BAR_WIDTH = 100;
 const BAR_HEIGHT = 7;
 
 function ProgressItem(props: ProgressItemProps) {
-	// const [refreshProgress, setRefreshProgress] = useState(true)
-	// const [progress, setProgress] = useState(0)
 
 	var [state, dispatch] = useReducer(progressReducer, initialState);
 	var { progress } = state;
@@ -73,25 +63,27 @@ function ProgressItem(props: ProgressItemProps) {
 	}, [progress, props.enableProgress]);
 
 	React.useEffect(() => {
-		if (props.enableProgress) {
-			// This if condition is critical at it blocks the multiple callbacks for other position in row
-			if (props.currentIndex === props.progressIndex) {
-				if (props.progressIndex != 0) {
-					blockProgress();
-					dispatch({ type: PROGRESS, payload: 0 });
-				} else {
-					isValid = false;
-					dispatch({ type: PROGRESS, payload: 0 });
-				}
-			}
-		} else {
+		if (!props.enableProgress) {
 			blockProgress();
+
+			return;
+		}
+
+		const shouldBlockMultipleCallbacks = props.currentIndex === props.progressIndex;
+
+		if (shouldBlockMultipleCallbacks) {
+			if (props.progressIndex > 0) {
+				blockProgress();
+				dispatch({ type: PROGRESS, payload: 0 });
+			} else {
+				isValid = false;
+				dispatch({ type: PROGRESS, payload: 0 });
+			}
 		}
 	}, [props.progressIndex]);
 
 	function startProgress() {
 		listener = setTimeout(() => {
-			// setProgress(progress + 1)
 			dispatch({ type: PROGRESS, payload: progress + 1 });
 		}, props.duration);
 	}
@@ -148,8 +140,6 @@ export default ProgressItem;
 
 const styles = StyleSheet.create({
 	mainParent: {
-		// marginLeft: '0.5%',
-		// marginRight: '0.5%',
 		borderRadius: 20,
 	},
 	childActive: {
