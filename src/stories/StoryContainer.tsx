@@ -138,7 +138,13 @@ const StoryContainer = (props: StoryContainerProps) => {
 					</View>
 				</View>
 
-				<View style={styles.progressView}>
+				<View style={{
+            				flex: 1,
+            				width: props?.progressView?.width ?? Dimensions.get('window').width, // Important
+            				position: 'absolute',
+            				flexDirection: 'row',
+            				backgroundColor: props?.progressView?.backgroundColor ?? TINT_GRAY,
+          		}}>
 					<ProgressView
 						enableProgress={
 							props.enableProgress != undefined

@@ -29,7 +29,7 @@ export interface StoryContainerProps extends CommonProps {
 
     replyView?: ReplyProps | undefined 
     footerComponent?: FunctionComponentElement<CommonProps> | undefined 
-
+    progressView?: { width: number; backgroundColor: string } | undefined
     onComplete: Function,  
 }
 
