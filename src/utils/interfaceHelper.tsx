@@ -31,6 +31,7 @@ export interface StoryContainerProps extends CommonProps {
     footerComponent?: FunctionComponentElement<CommonProps> | undefined 
     progressView?: { width: number; backgroundColor: string } | undefined
     onComplete: Function,  
+    getIndex?: Function
 }
 
 export interface ProgressViewProps extends CommonProps {

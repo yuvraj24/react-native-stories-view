@@ -54,11 +54,13 @@ const StoryContainer = (props: StoryContainerProps) => {
 	function onArrorClick(type: string) {
 		switch (type) {
 			case "left":
+				props.getIndex && props.getIndex(progressIndex, progressIndex === 0 ? progressIndex : progressIndex - 1);
 				onChange(progressIndex === 0 ? progressIndex : progressIndex - 1);
 				break;
 
 			case "right":
 				const size = props.imageStyle ? props.images.length - 1 : 0;
+				props.getIndex && props.getIndex(progressIndex, progressIndex === size ? progressIndex : progressIndex + 1);
 				onChange(progressIndex === size ? progressIndex : progressIndex + 1);
 				break;
 		}
